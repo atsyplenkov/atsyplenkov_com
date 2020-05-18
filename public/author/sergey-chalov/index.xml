@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sergey Chalov | Anatoly Tsyplenkov</title>
+    <link>/author/sergey-chalov/</link>
+      <atom:link href="/author/sergey-chalov/index.xml" rel="self" type="application/rss+xml" />
+    <description>Sergey Chalov</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Anatoly Tsyplenkov 2020</copyright><lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu5bdec6d1c58bf0b3dec1c68914799cdd_114539_512x512_fill_lanczos_center_2.png</url>
+      <title>Sergey Chalov</title>
+      <link>/author/sergey-chalov/</link>
+    </image>
+    
+    <item>
+      <title>Suspended sediment budget and intra-event sediment dynamics of a small glaciated mountainous catchment in the Northern Caucasus</title>
+      <link>/publication/intra-event_djankuat/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/intra-event_djankuat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A toolbox for sediment budget research in small catchments</title>
+      <link>/publication/sediment-toolbox/</link>
+      <pubDate>Wed, 22 Nov 2017 00:00:00 +0000</pubDate>
+      <guid>/publication/sediment-toolbox/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

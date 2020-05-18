@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nadezhda Ivanova | Anatoly Tsyplenkov</title>
+    <link>/author/nadezhda-ivanova/</link>
+      <atom:link href="/author/nadezhda-ivanova/index.xml" rel="self" type="application/rss+xml" />
+    <description>Nadezhda Ivanova</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Anatoly Tsyplenkov 2020</copyright><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu5bdec6d1c58bf0b3dec1c68914799cdd_114539_512x512_fill_lanczos_center_2.png</url>
+      <title>Nadezhda Ivanova</title>
+      <link>/author/nadezhda-ivanova/</link>
+    </image>
+    
+    <item>
+      <title>Quantifying channel bank erosion of a small mountain river in Russian wet subtropics using erosion pins</title>
+      <link>/publication/tsanyk-erosion-pins/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/tsanyk-erosion-pins/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

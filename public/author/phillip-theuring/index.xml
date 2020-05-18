@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Phillip Theuring | Anatoly Tsyplenkov</title>
+    <link>/author/phillip-theuring/</link>
+      <atom:link href="/author/phillip-theuring/index.xml" rel="self" type="application/rss+xml" />
+    <description>Phillip Theuring</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Anatoly Tsyplenkov 2020</copyright><lastBuildDate>Wed, 22 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu5bdec6d1c58bf0b3dec1c68914799cdd_114539_512x512_fill_lanczos_center_2.png</url>
+      <title>Phillip Theuring</title>
+      <link>/author/phillip-theuring/</link>
+    </image>
+    
+    <item>
+      <title>A toolbox for sediment budget research in small catchments</title>
+      <link>/publication/sediment-toolbox/</link>
+      <pubDate>Wed, 22 Nov 2017 00:00:00 +0000</pubDate>
+      <guid>/publication/sediment-toolbox/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
