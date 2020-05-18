@@ -3,48 +3,258 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+    <loc>/courses/example/example1/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+    <loc>/courses/example/</loc>
+    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/courses/example/example2/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/example/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication-type/2/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/anatoly-tsyplenkov/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/caucasus/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/djankuat/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/matthias-vanmaercke/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/sediment-yield/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/sergey-chalov/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/intra-event_djankuat/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-18T13:16:55+03:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/tidy-tuesday/</loc>
-    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+    <loc>/author/valentin-golosov/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-05-18T13:16:55+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-05-18T13:16:55+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/r/</loc>
+    <lastmod>2020-05-18T13:16:55+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/r/</loc>
+    <lastmod>2020-05-18T13:16:55+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/tidy-tuesday/</loc>
+    <lastmod>2020-05-18T13:16:55+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/tidy-tuesday/</loc>
+    <lastmod>2020-05-18T13:16:55+03:00</lastmod>
   </url>
   
   <url>
     <loc>/post/tidy-tuesday-nhl/</loc>
-    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-18T13:16:55+03:00</lastmod>
   </url>
   
   <url>
-    <loc>/about-me/</loc>
-    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
+    <loc>/publication-type/1/</loc>
+    <lastmod>2019-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/black-sea/</loc>
+    <lastmod>2019-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/channel-erosion/</loc>
+    <lastmod>2019-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/sediment-yield_caucasus/</loc>
+    <lastmod>2019-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/nadezhda-ivanova/</loc>
+    <lastmod>2019-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/tsanyk-erosion-pins/</loc>
+    <lastmod>2019-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/yulia-kuznetsova/</loc>
+    <lastmod>2019-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/courses/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/slides/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/slides/example/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/demo/</loc>
-    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
+    <loc>/privacy/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/hello-world/</loc>
-    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
+    <loc>/terms/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/sediment-toolbox/</loc>
+    <lastmod>2017-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/michael-marker/</loc>
+    <lastmod>2017-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/mikhail-samokhin/</loc>
+    <lastmod>2017-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/philipp-theuring/</loc>
+    <lastmod>2017-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/reza-zakerinejad/</loc>
+    <lastmod>2017-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/sediment-budget/</loc>
+    <lastmod>2017-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/soil-erosion/</loc>
+    <lastmod>2017-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/suspended-sediments/</loc>
+    <lastmod>2017-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/deep-learning/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/demo/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/external-project/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/internal-project/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>

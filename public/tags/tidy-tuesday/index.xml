@@ -1,26 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tidy Tuesday on Anatoly Tsyplenkov</title>
-    <link>/tags/tidy-tuesday/</link>
-    <description>Recent content in Tidy Tuesday on Anatoly Tsyplenkov</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 04 Mar 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/tidy-tuesday/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Tidy Tuesday NHL</title>
-      <link>/post/tidy-tuesday-nhl/</link>
-      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/tidy-tuesday-nhl/</guid>
-      <description>Okay, here it is. My first contribution to the my website. I’ll try to make a very quick and simple data exploration analysis for this weeks’ Tidy Tuesday. There are three datasets available. I’m not sure that I’ll be able to analyze all of them… Let’s start from the first top_250.
-library(tidyverse)library(atslib)library(extrafont)library(hrbrthemes)theme_set(hrbrthemes::theme_ft_rc(base_family = &amp;quot;Ubuntu Condensed&amp;quot;))top_250 &amp;lt;- readr::read_csv(&amp;#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-03-03/top_250.csv&amp;#39;)top_250## # A tibble: 251 x 9## raw_rank player years total_goals url_number raw_link link active yr_start## &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt;## 1 1 Wayne ~ 1979~ 894 1 /player~ https~ Retir~ 1979## 2 2 Gordie~ 1946~ 801 2 /player~ https~ Retir~ 1946## 3 3 Jaromi~ 1990~ 766 3 /player~ https~ Retir~ 1990## 4 4 Brett ~ 1986~ 741 4 /player~ https~ Retir~ 1986## 5 5 Marcel~ 1971~ 731 5 /player~ https~ Retir~ 1971## 6 6 Phil E~ 1963~ 717 6 /player~ https~ Retir~ 1963## 7 7 Mike G~ 1979~ 708 7 /player~ https~ Retir~ 1979## 8 8 Alex O~ 2005~ 700 8 /player~ https~ Active 2005## 9 9 Mark M~ 1979~ 694 9 /player~ https~ Retir~ 1979## 10 10 Steve ~ 1983~ 692 10 /player~ https~ Retir~ 1983## # .</description>
-    </item>
-    
-  </channel>
-</rss>
