@@ -37,6 +37,9 @@ social:
 - icon: researchgate
   icon_pack: ai
   link: https://www.researchgate.net/profile/Anatolii_Tsyplenkov
+- icon: landmark
+  icon_pack: fas
+  link: https://istina.msu.ru/profile/atsyplenkov/
 - icon: github
   icon_pack: fab
   link: https://github.com/atsyplenkov
