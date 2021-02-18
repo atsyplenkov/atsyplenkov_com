@@ -46,6 +46,9 @@ social:
 - icon: stack-overflow
   icon_pack: fab
   link: https://stackoverflow.com/users/9300556/atsyplenkov
+- icon: impactstory
+  icon_pack: ai
+  link: https://profiles.impactstory.org/u/0000-0003-4144-8402
 superuser: true
 title: Anatoly Tsyplenkov
 user_groups:
