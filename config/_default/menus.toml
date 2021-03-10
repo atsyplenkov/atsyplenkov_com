@@ -13,10 +13,10 @@
   url = "post/"
   weight = 20
 
-[[main]]
-  name = '<button type="submit" title="My Shiny applications" style="margin-left:auto; margin-right:auto;display:block;margin-top:-10%;background-color:transparent; border-color:transparent; filter:invert(100%); width:79px; height:25px;"><img src="https://d33wubrfki0l68.cloudfront.net/8f68bc526580587d60714f9279fbe9d86b25362a/79958/assets/img/shiny.png"/></button>'
-  url = "project/"
-  weight = 80
+#[[main]]
+#  name = '<button type="submit" title="My Shiny applications" style="margin-left:auto; margin-right:auto;display:block;margin-top:-10%;background-color:transparent; border-color:transparent; filter:invert(100%); width:79px; height:25px;"><img src="https://d33wubrfki0l68.cloudfront.net/8f68bc526580587d60714f9279fbe9d86b25362a/79958/assets/img/shiny.png"/></button>'
+#  url = "project/"
+#  weight = 80
 
 [[main]]
   name = "Publications"
