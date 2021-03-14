@@ -56,6 +56,6 @@ user_groups:
 - Visitors
 ---
 
-My name is Anatoly Tsyplenkov and I’m currently working at the [Makkaveev Lab of Soil Erosion and Fluvial Processes](https://makkaveevlab.com), Lomonosov Moscow State University. My last name is pronounced smth like this  [T͡sˈɨplˈɵnkof]. I love hydrology, fluvial geomorphology, <a href="https://cran.r-project.org/" target="_blank" rel="noopener"><i class="fab fa-r-project"></i> </a> programming language and to run marathons.
+My name is Anatoly Tsyplenkov and I’m currently working at the [Makkaveev Lab of Soil Erosion and Fluvial Processes](https://makkaveevlab.com), Lomonosov Moscow State University. My last name is pronounced smth like this  [T͡sˈɨplˈɵnkof]. I love hydrology, fluvial geomorphology, <a href="https://cran.r-project.org/" target="_blank" rel="noopener"><i class="fab fa-r-project"></i> </a> programming language and to run marathons. 
 
 I’m doing research in soil erosion and sediment transport using in-situ measurements as well as modelling. Projects range from small mountanious rivers to large scale catchments. I’ve just defended my [PhD thesis](https://istina.msu.ru/dissertations/243979129/) in December 2019 on the topic of *«Suspended sediment load formation in the small mountain river basins: general patterns and regional features»*. As part of my dissertation I have mastered a set of modern methods of soil erosion modeling, interpolation, machine learning and fingerprinting.
