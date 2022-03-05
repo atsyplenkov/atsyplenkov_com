@@ -70,5 +70,8 @@ I’m doing research in soil erosion and sediment transport using in-situ measur
 <div class="column" style ="float: left;width: 10%;padding: 3px;">
 <a href="https://github.com/atsyplenkov/loadflux"><img src="https://raw.githubusercontent.com/atsyplenkov/loadflux/master/man/figures/logo.svg" width="50px"/></a>
   </div>
+  <div class="column" style ="float: left;width: 10%;padding: 3px;">
+<a href="https://github.com/atsyplenkov/tgme"><img src="https://raw.githubusercontent.com/atsyplenkov/tgme/master/man/figures/logo.svg" width="50px"/></a>
+  </div>
 </div>
 
