@@ -49,8 +49,10 @@ tidy_250 <- top_250 %>%
                         as.character(century),
                         simplify = T)[,2],
          cc = as.numeric(cc)) %>%
-  mutate(year_end = case_when(year_end > cc ~ paste0(19, year_end),
-                              TRUE ~ paste0(20, year_end))) %>% 
+  mutate(year_end = case_when(
+    year_end > cc ~ paste0(19, year_end),
+    TRUE ~ paste0(20, year_end)
+  )) %>% 
   mutate_at(vars(year_start, year_end), ~as.numeric(.)) %>% 
   # We need to edit millenials ))
   mutate(year_end = ifelse(year_end < year_start,

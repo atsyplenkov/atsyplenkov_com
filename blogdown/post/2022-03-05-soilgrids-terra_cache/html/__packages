@@ -1,0 +1,8 @@
+knitr
+dplyr
+sf
+terra
+purrr
+tictoc
+future
+furrr

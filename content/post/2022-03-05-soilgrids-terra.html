@@ -1,0 +1,162 @@
+---
+title: 'Moving beyond GDAL: accessing SoilGrids via `terra`'
+author: ''
+date: '2022-03-05'
+slug: moving-beyond-gdal-accessing-soilgrids-via-terra
+categories:
+- R
+- RUSLE
+tags:
+- R
+- soil erosion
+- soil
+- rusle
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2022-03-05T14:05:39+03:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>After several <code>QGIS</code> and <code>R</code> packages updates, I cannot download <a href="https://www.isric.org/explore/soilgrids">SoilGrids</a> with <code>rgdal</code> anymore. When I’m trying to run code from <a href="https://git.wur.nl/isric/soilgrids/soilgrids.notebooks/-/blob/master/markdown/webdav_from_R.md">SoilGrids WebDAV tutorial</a> I am receiving a following error:</p>
+<blockquote>
+<p><code>ERROR 11: CURL error: SSL certificate problem: unable to get local issuer certificate</code></p>
+</blockquote>
+<p>I never managed to fix this issue, so I decided to let it go since everyone is slowly quitting GDAL anyway. Here is my approach to downloading cropped and reprojected SoilGrids raster. There was a really great <a href="https://rpubs.com/ials2un/soilgrids_webdav">tutorial</a> by Ivan Lizarazo on getting several SoilGrids layers using <code>rgdal</code>. My approach is mostly based on it.</p>
+<div id="boundary-layer" class="section level3">
+<h3>1. Boundary layer</h3>
+<p>First of all, let’s load some boundary layer, i.e., our area of interest (AOI). I will use the default <code>sf</code> sample data for North Carolina counties. To reduce the size of AOI, let me select only the first county. The SoilGrids files are stored in Interrupted Goode Homolosine, so I have to reproject our AOI polygon to it.</p>
+<pre class="r"><code>library(dplyr)
+library(sf)
+
+# Load sample data
+nc &lt;- st_read(system.file(&quot;shape/nc.shp&quot;,
+  package = &quot;sf&quot;
+),
+quiet = T
+) %&gt;%
+  slice(1)
+
+# Transform to IGH projection
+igh &lt;- &quot;+proj=igh +lat_0=0 +lon_0=0 +datum=WGS84 +units=m +no_defs&quot;
+nc_igh &lt;- st_transform(nc, igh)</code></pre>
+</div>
+<div id="download-urls" class="section level3">
+<h3>2. Download urls</h3>
+<p>Now Let’s just copy download urls from previous <a href="https://rpubs.com/ials2un/soilgrids_webdav">tutorials</a>. And create a link to every other separate <code>.vrt</code> file, since we are gonna <code>purrr::map</code> them later. I’m interested only in mean topsoil characteristics (i.e. 0-30 cm) right now. So I will download sand, silt, and clay content and soil organic carbon content (soc).</p>
+<pre class="r"><code>sg_url &lt;- &quot;/vsicurl/https://files.isric.org/soilgrids/latest/data/&quot;
+props &lt;- c(&quot;sand&quot;, &quot;silt&quot;, &quot;clay&quot;, &quot;soc&quot;)
+layers &lt;- c(&quot;0-5&quot;, &quot;5-15&quot;, &quot;15-30&quot;)
+
+vrt &lt;- paste0(
+  props, &quot;/&quot;,
+  props, &quot;_&quot;,
+  rep(layers, 4),
+  &quot;cm_mean.vrt&quot;
+)
+
+vrt[1]</code></pre>
+<pre><code>## [1] &quot;sand/sand_0-5cm_mean.vrt&quot;</code></pre>
+<p>Then, we need to create a list of paths to save. Let’s create a directory <code>soilgrid</code> where we are going to download our layers.</p>
+<pre class="r"><code># Optional
+# Check if the directory exists
+if (!dir.exists(&quot;soilgrid&quot;)) {
+  dir.create(&quot;soilgrid&quot;)
+}
+
+
+# Create paths
+lfile &lt;- paste0(
+  &quot;soilgrid/&quot;,
+  props, &quot;_&quot;,
+  rep(layers, 4),
+  &quot;.tif&quot;
+)
+
+lfile[1]</code></pre>
+<pre><code>## [1] &quot;soilgrid/sand_0-5.tif&quot;</code></pre>
+</div>
+<div id="download-and-preprocess-function" class="section level3">
+<h3>3. Download and preprocess function</h3>
+<p>My general idea is to crop the SoilGrid layer to the bounding box, reproject to my CRS (i.e. CRS of the <code>nc</code> layer), download, and then write as <code>.tif</code>. However, I want to do this for 12 rasters. Therefore, we need to write a function we are going to apply:</p>
+<pre class="r"><code>library(terra)
+
+# Function to download and transform soilgrid layers
+soilgrids_download &lt;- function(list_vrt, # download url
+                               list_lfile, # destination path
+                               shape_igh, # AOI shape in IGH proj
+                               destproj) { # desired projection
+
+  terra::rast(paste0(sg_url, list_vrt)) %&gt;% # read raster
+    terra::crop(ext(vect(shape_igh))) %&gt;% # crop to bounding box
+    terra::project(destproj) %&gt;% # reproject
+    terra::writeRaster(list_lfile,
+      overwrite = T
+    ) # Save
+}</code></pre>
+<p>Before running it in the loop, let’s try it for the first layer.</p>
+<pre class="r"><code>soilgrids_download(
+  list_vrt = vrt[1],
+  list_lfile = lfile[1],
+  shape_igh = nc_igh,
+  destproj = st_crs(nc)$proj4string
+)
+
+rast(lfile[1]) %&gt;%
+  plot()</code></pre>
+<p><img src="/post/2022-03-05-soilgrids-terra_files/figure-html/unnamed-chunk-5-1.png" width="2400" /></p>
+<p>It worked!</p>
+</div>
+<div id="map-download" class="section level3">
+<h3>4. Map download</h3>
+<p>Next, with the help of <code>purrr</code> we can apply this function to all our links. Let’s measure elapsed time.</p>
+<pre class="r"><code>library(purrr)
+library(tictoc)
+
+tic()
+walk2(
+  vrt,
+  lfile,
+  ~ soilgrids_download(.x, .y,
+    shape_igh = nc_igh,
+    destproj = st_crs(nc)$proj4string
+  )
+)
+toc()</code></pre>
+<pre><code>## 346.47 sec elapsed</code></pre>
+<p>Well, almost 6 mins. It is necessary to improve the timing somehow. This process can be run in parallel with <code>furrr</code>.</p>
+<pre class="r"><code>library(furrr)
+
+# Set Parallel
+no_cores &lt;- availableCores() - 1
+plan(multisession,
+  workers = no_cores
+)
+
+# Download!
+tic()
+future_walk2(
+  vrt, lfile,
+  ~ soilgrids_download(.x, .y,
+    shape_igh = nc_igh,
+    destproj = st_crs(nc)$proj4string
+  )
+)
+toc()</code></pre>
+<pre><code>## 214.97 sec elapsed</code></pre>
+<pre class="r"><code># Exit parallel
+plan(sequential)</code></pre>
+<p>Less than 2 minutes. As <a href="https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw">Josh Starmer</a> says, “BAM”. Three times faster!</p>
+<pre class="r"><code>list.files(&quot;soilgrid&quot;)</code></pre>
+<pre><code>##  [1] &quot;clay_0-5.tif&quot;   &quot;clay_15-30.tif&quot; &quot;clay_5-15.tif&quot;  &quot;sand_0-5.tif&quot;  
+##  [5] &quot;sand_15-30.tif&quot; &quot;sand_5-15.tif&quot;  &quot;silt_0-5.tif&quot;   &quot;silt_15-30.tif&quot;
+##  [9] &quot;silt_5-15.tif&quot;  &quot;soc_0-5.tif&quot;    &quot;soc_15-30.tif&quot;  &quot;soc_5-15.tif&quot;</code></pre>
+</div>

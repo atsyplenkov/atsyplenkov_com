@@ -21,6 +21,7 @@ image:
 projects: []
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p>Okay, here it is. My first contribution to the my website. I’ll try to make a very quick and simple data exploration analysis for this weeks’ <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-03-03/readme.md">Tidy Tuesday</a>. There are three datasets available. I’m not sure that I’ll be able to analyze all of them… Let’s start from the first <code>top_250</code>.</p>
@@ -34,18 +35,18 @@ top_250 &lt;- readr::read_csv(&#39;https://raw.githubusercontent.com/rfordatasci
 
 top_250</code></pre>
 <pre><code>## # A tibble: 251 x 9
-##    raw_rank player  years total_goals url_number raw_link link   active yr_start
-##       &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;       &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;     &lt;dbl&gt;
-##  1        1 Wayne ~ 1979~         894          1 /player~ https~ Retir~     1979
-##  2        2 Gordie~ 1946~         801          2 /player~ https~ Retir~     1946
-##  3        3 Jaromi~ 1990~         766          3 /player~ https~ Retir~     1990
-##  4        4 Brett ~ 1986~         741          4 /player~ https~ Retir~     1986
-##  5        5 Marcel~ 1971~         731          5 /player~ https~ Retir~     1971
-##  6        6 Phil E~ 1963~         717          6 /player~ https~ Retir~     1963
-##  7        7 Mike G~ 1979~         708          7 /player~ https~ Retir~     1979
-##  8        8 Alex O~ 2005~         700          8 /player~ https~ Active     2005
-##  9        9 Mark M~ 1979~         694          9 /player~ https~ Retir~     1979
-## 10       10 Steve ~ 1983~         692         10 /player~ https~ Retir~     1983
+##    raw_rank player   years total_goals url_number raw_link link  active yr_start
+##       &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;       &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;     &lt;dbl&gt;
+##  1        1 Wayne G~ 1979~         894          1 /player~ http~ Retir~     1979
+##  2        2 Gordie ~ 1946~         801          2 /player~ http~ Retir~     1946
+##  3        3 Jaromir~ 1990~         766          3 /player~ http~ Retir~     1990
+##  4        4 Brett H~ 1986~         741          4 /player~ http~ Retir~     1986
+##  5        5 Marcel ~ 1971~         731          5 /player~ http~ Retir~     1971
+##  6        6 Phil Es~ 1963~         717          6 /player~ http~ Retir~     1963
+##  7        7 Mike Ga~ 1979~         708          7 /player~ http~ Retir~     1979
+##  8        8 Alex Ov~ 2005~         700          8 /player~ http~ Active     2005
+##  9        9 Mark Me~ 1979~         694          9 /player~ http~ Retir~     1979
+## 10       10 Steve Y~ 1983~         692         10 /player~ http~ Retir~     1983
 ## # ... with 241 more rows</code></pre>
 <p>This dataset contains 250 NHL &amp; WHA career leaders and records for goals. First, we’re going to tidy our dataset a bit. What is the most interesting here is total goals really depends on the career length?</p>
 <p>The information about years of career contains in <code>years</code> variable. It has a structure of <code>YYYY-YY</code>. First of all, let split it to <code>year_start</code> and <code>year_end</code>.</p>
@@ -58,8 +59,10 @@ top_250</code></pre>
                         as.character(century),
                         simplify = T)[,2],
          cc = as.numeric(cc)) %&gt;%
-  mutate(year_end = case_when(year_end &gt; cc ~ paste0(19, year_end),
-                              TRUE ~ paste0(20, year_end))) %&gt;% 
+  mutate(year_end = case_when(
+    year_end &gt; cc ~ paste0(19, year_end),
+    TRUE ~ paste0(20, year_end)
+  )) %&gt;% 
   mutate_at(vars(year_start, year_end), ~as.numeric(.)) %&gt;% 
   # We need to edit millenials ))
   mutate(year_end = ifelse(year_end &lt; year_start,
