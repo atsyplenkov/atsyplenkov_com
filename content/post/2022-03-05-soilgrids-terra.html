@@ -131,8 +131,8 @@ walk2(
   )
 )
 toc()</code></pre>
-<pre><code>## 346.47 sec elapsed</code></pre>
-<p>Well, almost 6 mins. It is necessary to improve the timing somehow. This process can be run in parallel with <code>furrr</code>.</p>
+<pre><code>## 81.11 sec elapsed</code></pre>
+<p>Well, almost 2 mins. It is necessary to improve the timing somehow. This process can be run in parallel with <code>furrr</code>.</p>
 <pre class="r"><code>library(furrr)
 
 # Set Parallel
@@ -151,10 +151,10 @@ future_walk2(
   )
 )
 toc()</code></pre>
-<pre><code>## 214.97 sec elapsed</code></pre>
+<pre><code>## 41.51 sec elapsed</code></pre>
 <pre class="r"><code># Exit parallel
 plan(sequential)</code></pre>
-<p>Less than 2 minutes. As <a href="https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw">Josh Starmer</a> says, “BAM!”. Three times faster!</p>
+<p>Less than 1 minute. As <a href="https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw">Josh Starmer</a> says, “BAM!”. Three times faster!</p>
 <pre class="r"><code>list.files(&quot;soilgrid&quot;)</code></pre>
 <pre><code>##  [1] &quot;clay_0-5.tif&quot;   &quot;clay_15-30.tif&quot; &quot;clay_5-15.tif&quot;  &quot;sand_0-5.tif&quot;  
 ##  [5] &quot;sand_15-30.tif&quot; &quot;sand_5-15.tif&quot;  &quot;silt_0-5.tif&quot;   &quot;silt_15-30.tif&quot;

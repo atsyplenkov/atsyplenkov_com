@@ -26,7 +26,7 @@ projects: []
 ```{r setup, include=FALSE}
 library(knitr)
 knitr::opts_chunk$set(
-  cache = TRUE,
+  #cache = TRUE,
   warning = FALSE,
   message = FALSE, 
   echo = TRUE,
@@ -149,7 +149,7 @@ toc()
 
 ```
 
-Well, almost 6 mins. It is necessary to improve the timing somehow. This process can be run in parallel with `furrr`.
+Well, almost 2 mins. It is necessary to improve the timing somehow. This process can be run in parallel with `furrr`.
 
 ```{r}
 library(furrr)
@@ -172,7 +172,7 @@ plan(sequential)
 
 ```
 
-Less than 2 minutes. As [Josh Starmer](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw) says, "BAM!". Three times faster! 
+Less than 1 minute. As [Josh Starmer](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw) says, "BAM!". Three times faster! 
 
 ```{r}
 
