@@ -1,5 +1,5 @@
 ---
-title: 'Moving beyond GDAL: accessing SoilGrids via `terra`'
+title: 'Moving beyond GDAL: accessing SoilGrids via {terra}'
 author: ''
 date: '2022-03-05'
 slug: moving-beyond-gdal-accessing-soilgrids-via-terra
@@ -172,7 +172,7 @@ plan(sequential)
 
 ```
 
-Less than 2 minutes. As [Josh Starmer](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw) says, "BAM". Three times faster! 
+Less than 2 minutes. As [Josh Starmer](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw) says, "BAM!". Three times faster! 
 
 ```{r}
 
